@@ -1,0 +1,356 @@
+gigitGit is called as SCM
+
+Source code management
+
+compae to other tools like cvs,perforce etc..
+
+it is open source 
+
+cost wise is low and number of features like security..
+
+GIT is developed by linux developer
+
+SVn - centrailised repository management
+
+GIT - distrunited repository manaement
+
+--- commands ---
+
+189856
+
+
+git config --global user.name "david"
+
+git congif --global user.email "david.mca1001@gmail.com"
+
+git config --list
+
+
+touch file name
+
+git status
+
+git add file name
+
+git commit -m "sample"
+
+git clone urllink
+
+git push - from local to central sysstem, 
+
+git pull - from central to local system, some developer push the code in repository like f2 file, and exist dev pull the f1 file and modified and then try to push into repo,
+
+he will get some error , in this senorio we can first pull the repo and then push the code then it works fine and creats new files in repo.
+
+git log = show all logs - path of gitdir/.git/logs
+ 
+git log -2 , only two logs
+
+git log --oneline , shows t7 characters
+
+git log --online -3
+
+git log --author=dev
+git log --author=dev=2
+git log --since2017-08-01
+
+git log --until=2017-07-01
+
+log directory - workspace/.git/logs
+
+git reset --soft sha (above code of the particular code) (local to index)
+
+git reset head sony (index to workspace)
+
+git reset --soft shacode (of lastone) all files move from local to workspace
+
+git reset head . all files move index to local
+
+git reset --mixed (LOCAL TO workspace)
+
+if you want to push and pull the files, the repository and local should be same..
+
+git branch 
+
+git branch branch name
+
+git show shacode , display all commit files
+
+git branchQ checkout master-1
+
+git branch -b master-2 --> create and enter into master2 branch
+
+git branch -d branch name - delete branch 1
+
+git merge branch name (master -1)
+
+git merge --abort
+
+suppose u have modified files in master-1 then u need to login master branch and do the merge command
+
+git branch --merged
+
+git config --global  allias.lo "log --oneline " instead of git config --oneline
+
+git config --global --unset alias.lo "delete the alias.no
+
+git stash list , stash command is used for store in temporary stash memory from index stage.
+
+git stash save "stashone" use this command after add . then it will store in stash memory
+
+git stash show -p stashnme
+
+git stash pop - files back to index area
+
+git stash apply
+
+git stash drop
+
+git add --help displays all decriptionof the command
+
+vi .gitignore " it ignores every modified files"
+
+git status
+
+git add .
+
+git branch -m old name new name
+
+git rm filename
+
+rm -rf filename
+
+git diff branch name branch 2 name
+
+git branch -r --remote repository displays
+
+git branch -a -- local repository displays
+
+git fetch -- fetching from central to remote
+
+git merge remotename -- merging remote and local machines
+
+git pull = fetch + merge
+
+git tag tagname - create tag like versions
+
+git tag - shows tag name
+
+git push orgin tagname - upload tags in central repository
+
+git psuh --tags -- all tages upload into cetntral repository
+
+git tag -d tagname - delete tag in local machine
+
+git push origin --delete taganme - delete in central repository
+
+git tag v-1,1 ahasjss
+
+git rebase merge - merge two branches with out merger name
+
+git commit --amend -m "msg" -> change the comit mesage label
+
+_________________________________
+
+Mven
+
+maven download -- https://maven.apache.org/download.cgi
+
+Mven is a build and project management tool 
+
+Ant is a Build tool
+
+mven is dependent on JDK pluign to work 
+
+after install jdk and set the env varaibles then check in command prompt
+
+Java coomand
+
+open cmd - type -- mvn archetype:generate
+
+when ping this command - lot of plugins will be downloaded
+
+1030 is a folder structure and it contains number of versions
+
+define group id  - devops
+
+articraft id - project 1
+
+y/n - yes
+
+created project1 folder 
+
+src , pom - xml file -- pom - project object model
+
+creating exe file - enter into the project dir and type mvn package
+
+if yu want to output file for stored pluogins - type archetype:generate > a.out
+
+if you want to create particular project folder then use the number 1544
+
+it will create the folder which you provide the folder name
+
+every project is not same project folder..
+
+it depends on the project..
+
+if you want o install maven in linux then open linux and type command
+
+wget <<url of the the softweare>>
+
+rpm -ivh .rpm file
+
+in ant build.xml files and maven pom.xml file it will create folder structure
+
+automatically 
+
+
+_________________
+
+Tomcat 
+
+first check jdk is installed or not in system
+
+download tomcat software from tomcat.apache website latest version
+
+default local host in localhost:8080
+
+under tomcat dir go to bin folder and execute the startup batch file..
+
+once hit the tomcat page it is asking user and password or modify the username and passwd in tomcat-user.conf file.
+
+_______________________________
+
+jenkins
+
+jenkins is CI/CD tool and plugin based tool.. around 5000 plugins are available in jenkins but we can use just 2o plugins mostly used in our project.
+
+download jenkins.war file from jenkins website (every week latest version released)
+
+copy the war file to practice folder and then open cmd prompt 
+
+go the path and run java -jar jenkins.war
+
+jenkins default port number is 8080
+
+open the jenikins server - localhost:8080 and it is asked unlock password. which we have already in extract file.
+
+we can select suggested plugins or manuel select plugins
+
+first install jenkins.war file in application server and make sure the server is up and running.
+
+or jenkins.war file is up and running in backend. if ,war file stops in backend the jenkins page not found error will come.
+
+By default only two jobs will be execute at atime and remaing or in build in queue.
+
+we have lot of configurations settings ti build job
+
+1. configuration system 
+2. configure global security -- jenkins have own user database
+3. configure credentials
+4. global tool configuration - configure jdk,git,maven,docker installation
+5. Reload conf from desk - entire jenkins backup .jenkins folder.
+6. Manage plugins - plugins
+7. System information - jenkins info
+8. System log - logs
+9. Load statistics - server status
+10. jeknis CLI - run through command line
+11. script console
+12. Manage nodes - node , slave concept 
+13. manage users
+14. prepare for shutdown
+
+build triggers >>
+
+git
+
+maven
+
+poll scm
+
+build periodically
+
+cron tab
+
+post build >> email notification
+
+deploy senario>>
+
+first create job name as deploy
+
+modify the configuration settings in gloabl tool conf tab
+
+jdk,git,maven
+
+and come to configure tab under deploy job, install plugin deploy to container plugin
+
+deploy war/ear container
+
+war file name -- **/*.war
+context -- webapps.war
+continer - tomcat7
+
+           credentails -- uer and passwd
+           url - localhost;800
+
+
+2nd way to deploy through copy command
+
+execute windows batch command
+
+   copy "C:\Users\David Nada\.jenkins\workspace\deploy\targets\webapp.war" "C:\Users\David Nada\Downloads\apache-tomcat-9.0.0.M26\webapps\webapp.war"
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
